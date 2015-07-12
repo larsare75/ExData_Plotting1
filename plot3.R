@@ -14,7 +14,6 @@ elpowcons$Time<-paste(elpowcons$Date,elpowcons$Time)
 elpowcons$Date=as.Date(elpowcons$Date,format = "%d/%m/%Y")
 elpowcons$Time<- strptime(elpowcons$Time,format= "%d/%m/%Y %H:%M:%S")
 
-#plot(elpowcons$Time,elpowcons$Global_active_power,type = "l", ylab = "Global Active Power (kilowatts)",xlab="")
 png(filename="plot3.png", width=480, height=480)
 plot(elpowcons$Time,elpowcons$Sub_metering_1,type = "l", ylab = "Energy sub metering",xlab="")
 lines(elpowcons$Time,elpowcons$Sub_metering_2,col="red")
